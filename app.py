@@ -4,7 +4,7 @@ from flask import Flask, jsonify, request, redirect, url_for
 from flask_cors import CORS
 import pandas as pd
 
-pdata4 = pd.read_csv('./employee_data.csv', index_col=False, delimiter=',')
+pdata = pd.read_csv('./employee_data.csv', index_col=False, delimiter=',')
 
 mydb = mysql.connector.connect(host='localhost',
                                user='root',
@@ -32,7 +32,7 @@ def create_table():
             print('reached')
             print("Table is created....")
             # loop through the data frame
-            for i, row in pdata4.iterrows():
+            for i, row in pdata.iterrows():
                 # here %S means string values
                 sql = "INSERT INTO employee_data VALUES (%s,%s,%s,%s,%s,%s)"
                 cursor.execute(sql, tuple(row))
