@@ -8,7 +8,7 @@ pdata4 = pd.read_csv('./employee_data.csv', index_col=False, delimiter=',')
 
 mydb = mysql.connector.connect(host='localhost',
                                user='root',
-                               passwd='awesomedude',
+                               passwd='********',
                                database='db')
 cursor = mydb.cursor()
 
