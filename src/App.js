@@ -139,6 +139,14 @@ function App() {
       </table>
      )
   }
+  function OpeningMessage(){
+     return (
+      <div className = "App">
+        <h1> Welcome to the Employee Database! </h1>
+        <h2> To view the list of employees, please click the "View Employee List <CgUserList />" button above </h2>
+      </div>
+    )
+  }
   return (
     <div className="App">
        <Popup trigger={<button>Add <CgAdd /></button>}
@@ -252,6 +260,7 @@ function App() {
             </form>
         </Popup>
       {show ? <ShowTable /> : null}
+      {show ? null : <OpeningMessage />}
     </div>
   );
 }
