@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Popup from 'reactjs-popup';
 import NumberFormat from 'react-number-format';
 import './App.css';
-import { CgAdd, CgRemove, CgViewGrid, CgPen } from "react-icons/cg";
+import { CgUserAdd, CgUserRemove, CgUserList, CgPen } from "react-icons/cg";
 
 function App() {
   const [info, setInfo] = useState([])
@@ -149,7 +149,7 @@ function App() {
   }
   return (
     <div className="App">
-       <Popup trigger={<button>Add <CgAdd /></button>}
+       <Popup trigger={<button>Add <CgUserAdd /></button>}
         position="bottom center">
         <form onSubmit = {handleAddConfirm}>
         <p>
@@ -205,7 +205,7 @@ function App() {
         <button>Confirm</button>
     </form>
     </Popup>
-   <Popup trigger={<button> Remove <CgRemove /> </button>}
+   <Popup trigger={<button> Remove <CgUserRemove /> </button>}
         position="bottom center">
         <form onSubmit = {handleRemoveConfirm}>
                 <p>
@@ -236,7 +236,7 @@ function App() {
                 <button>Confirm</button>
             </form>
         </Popup>
-        <button onClick = {viewEmployeeList}>{buttonName} <CgViewGrid/></button>
+        <button onClick = {viewEmployeeList}>{buttonName} <CgUserList/></button>
         <Popup trigger={<button> Update Employee Role <CgPen /> </button>} position="bottom center">
             <form onSubmit = {handleUpdateConfirm}>
                 <p>
