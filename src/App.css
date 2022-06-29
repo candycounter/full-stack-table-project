@@ -1,0 +1,86 @@
+.App{
+    text-align: center;
+}
+body{
+    background-color: white;
+
+}
+th, td{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th{
+    padding-top: 12px;
+    padding-top: 12px;
+    background-color: black;
+    color: white;
+}
+
+table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tr:hover{
+    background-color: #ddd;
+}
+
+form{
+    text-align: left;
+}
+
+input{
+    text-align: left;
+    background-color: black;
+    color: white;
+    border-bottom: 3px solid white;
+
+}
+
+button{
+    font-size: 20px;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    text-align:center;
+    margin-left: 50px;
+
+}
+
+form{
+    border-radius: 4px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+form p {
+    text-align: right;
+}
+
+form button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+form button:hover{
+    background-color: white;
+    color: black;
+}
+
+
+button:hover{
+    transition-duration: 0.4s;
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
