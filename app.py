@@ -2,6 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 from flask import Flask, jsonify, request, redirect, url_for
 import pandas as pd
+import random
 
 pdata = pd.read_csv('./employee_data.csv', index_col=False, delimiter=',')
 
@@ -62,7 +63,7 @@ def add_employee():
     last_name = data['last']
     education = data['education']
     year_hired = data['year_hired']
-    employee_id = data['employee_id']
+    employee_id = random.randint(100000000, 900000000)
     role = data['role']
     val = (first_name, last_name, education, year_hired, employee_id, role)
     stmnt = "INSERT INTO employee_data VALUES (%s,%s,%s,%s,%s,%s)"
