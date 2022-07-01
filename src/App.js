@@ -29,11 +29,6 @@ function App() {
 
   const handleAddConfirm = (event) => {
         event.preventDefault();
-        setAddedInfo(
-            {
-                "employee_id": Math.floor(100000000 + Math.random() * 900000000)
-            }
-        )
         console.log(addedInfo);
         fetch('http://localhost:5000/addemployee', {
             'method':'POST',
